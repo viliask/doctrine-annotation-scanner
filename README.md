@@ -1,6 +1,7 @@
 # Annotation Scanner [![Build Status](https://travis-ci.org/phramz/doctrine-annotation-scanner.png?branch=master)](https://travis-ci.org/phramz/doctrine-annotation-scanner)
 
 Annotation Scanner is a library to scan files and folders for annotated classes using doctrine annotations.
+The only changed thing is access modifier of parseNamespaceString method to allow inheritance. That's because PHP 8 process tokens in different way.
 
 Install
 ------
