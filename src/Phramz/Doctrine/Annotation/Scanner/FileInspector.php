@@ -132,7 +132,7 @@ class FileInspector
      * @param integer $offset
      * @return string
      */
-    private function parseNamespaceString($tokens, $offset)
+    protected function parseNamespaceString($tokens, $offset)
     {
         $namespace = '';
 
