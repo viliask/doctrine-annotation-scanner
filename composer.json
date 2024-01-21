@@ -23,6 +23,5 @@
     },
     "autoload": {
         "psr-0": { "Phramz\\Doctrine\\Annotation": "src/" }
-    },
-    "minimum-stability": "stable"
+    }
 }
