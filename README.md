@@ -6,6 +6,11 @@ The only changed thing is access modifier of parseNamespaceString method to allo
 Install
 ------
 
+``` 
+composer require viliask/doctrine-annotation-scanner: "dev-master"
+```
+
+
 It's easy if you use composer!
 
 edit your `composer.json`
