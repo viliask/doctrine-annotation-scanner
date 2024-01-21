@@ -20,13 +20,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Scanner;
+namespace Viliask\Doctrine\Annotation\Scanner;
 
 use Symfony\Component\Finder\SplFileInfo;
 
 /**
  * Class ClassFileInfo
- * @package Phramz\Doctrine\Annotation\Tests\Scanner
+ * @package Viliask\Doctrine\Annotation\Tests\Scanner
  */
 class ClassFileInfo extends SplFileInfo
 {

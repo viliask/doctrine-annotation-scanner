@@ -24,6 +24,6 @@
 use Doctrine\Common\Annotations\AnnotationRegistry;
 
 $loader = require __DIR__ . "/../vendor/autoload.php";
-$loader->add('Phramz\\Doctrine\\Annotation', __DIR__);
+$loader->add('Viliask\\Doctrine\\Annotation', __DIR__);
 
-AnnotationRegistry::registerAutoloadNamespace('Phramz\\Doctrine\\Annotation', __DIR__);
+AnnotationRegistry::registerAutoloadNamespace('Viliask\\Doctrine\\Annotation', __DIR__);

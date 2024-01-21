@@ -20,14 +20,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Fixtures\Classes;
+namespace Viliask\Doctrine\Annotation\Fixtures\Classes;
 
-use Phramz\Doctrine\Annotation\Fixtures\Annotations\Foo;
-use Phramz\Doctrine\Annotation\Fixtures\Annotations\Bar;
+use Viliask\Doctrine\Annotation\Fixtures\Annotations\Foo;
+use Viliask\Doctrine\Annotation\Fixtures\Annotations\Bar;
 
 /**
  * Class AnnotatedClass
- * @package Phramz\Doctrine\Annotation\Fixtures\Classes
+ * @package Viliask\Doctrine\Annotation\Fixtures\Classes
  * @Foo
  */
 class AnnotatedClass

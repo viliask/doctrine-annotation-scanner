@@ -20,19 +20,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Tests\Scanner;
+namespace Viliask\Doctrine\Annotation\Tests\Scanner;
 
-use Phramz\Doctrine\Annotation\Scanner\ClassFileInfo;
+use Viliask\Doctrine\Annotation\Scanner\ClassFileInfo;
 
 /**
  * Class ClassFileInfoTest
- * @package Phramz\Doctrine\Annotation\Tests\Scanner
- * @covers Phramz\Doctrine\Annotation\Scanner\ClassFileInfo
+ * @package Viliask\Doctrine\Annotation\Tests\Scanner
+ * @covers Viliask\Doctrine\Annotation\Scanner\ClassFileInfo
  */
 class ClassFileInfoTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var \Phramz\Doctrine\Annotation\Scanner\ClassFileInfo
+     * @var \Viliask\Doctrine\Annotation\Scanner\ClassFileInfo
      */
     private $classFileInfo = null;
 
@@ -85,7 +85,7 @@ class ClassFileInfoTest extends \PHPUnit_Framework_TestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->mockClassInspector = $this->getMockBuilder('Phramz\Doctrine\Annotation\Scanner\ClassInspector')
+        $this->mockClassInspector = $this->getMockBuilder('Viliask\Doctrine\Annotation\Scanner\ClassInspector')
             ->setMethods(array(
                 'containsClassAnnotation',
                 'containsMethodAnnotation',

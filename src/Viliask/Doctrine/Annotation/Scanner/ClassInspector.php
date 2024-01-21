@@ -20,14 +20,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Scanner;
+namespace Viliask\Doctrine\Annotation\Scanner;
 
 use Doctrine\Common\Annotations\Reader;
-use Phramz\Doctrine\Annotation\Exception\ClassNotFoundException;
+use Viliask\Doctrine\Annotation\Exception\ClassNotFoundException;
 
 /**
  * Class ClassInspector
- * @package Phramz\Doctrine\Annotation\Scanner
+ * @package Viliask\Doctrine\Annotation\Scanner
  */
 class ClassInspector
 {

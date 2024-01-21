@@ -20,16 +20,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Scanner;
+namespace Viliask\Doctrine\Annotation\Scanner;
 
 use Doctrine\Common\Annotations\Reader;
-use Phramz\Doctrine\Annotation\Exception\AnnotationScannerException;
+use Viliask\Doctrine\Annotation\Exception\AnnotationScannerException;
 use Symfony\Component\Finder\Finder as SymfonyFinder;
 use Symfony\Component\Finder\SplFileInfo;
 
 /**
  * Class Scanner
- * @package Phramz\Doctrine\Annotation\Scanner
+ * @package Viliask\Doctrine\Annotation\Scanner
  */
 class Scanner implements \IteratorAggregate
 {

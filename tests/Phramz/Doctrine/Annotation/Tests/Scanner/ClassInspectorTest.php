@@ -20,18 +20,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Tests\Scanner;
+namespace Viliask\Doctrine\Annotation\Tests\Scanner;
 
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\Reader;
-use Phramz\Doctrine\Annotation\Fixtures\Annotations\Bar;
-use Phramz\Doctrine\Annotation\Fixtures\Annotations\Foo;
-use Phramz\Doctrine\Annotation\Scanner\ClassInspector;
+use Viliask\Doctrine\Annotation\Fixtures\Annotations\Bar;
+use Viliask\Doctrine\Annotation\Fixtures\Annotations\Foo;
+use Viliask\Doctrine\Annotation\Scanner\ClassInspector;
 
 /**
  * Class ClassInspectorTest
- * @package Phramz\Doctrine\Annotation\Tests\Scanner
- * @covers Phramz\Doctrine\Annotation\Scanner\ClassInspector
+ * @package Viliask\Doctrine\Annotation\Tests\Scanner
+ * @covers Viliask\Doctrine\Annotation\Scanner\ClassInspector
  */
 class ClassInspectorTest extends \PHPUnit_Framework_TestCase
 {
@@ -54,7 +54,7 @@ class ClassInspectorTest extends \PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->fixtureClassname = 'Phramz\Doctrine\Annotation\Fixtures\Classes\AnnotatedClass';
+        $this->fixtureClassname = 'Viliask\Doctrine\Annotation\Fixtures\Classes\AnnotatedClass';
 
         $this->reader = new AnnotationReader(); // TODO mock that
         $this->classInspector =  new ClassInspector($this->fixtureClassname, $this->reader);
@@ -62,11 +62,11 @@ class ClassInspectorTest extends \PHPUnit_Framework_TestCase
 
     public function testConstruct()
     {
-        $this->assertInstanceOf('Phramz\Doctrine\Annotation\Scanner\ClassInspector', $this->classInspector);
+        $this->assertInstanceOf('Viliask\Doctrine\Annotation\Scanner\ClassInspector', $this->classInspector);
     }
 
     /**
-     * @expectedException \Phramz\Doctrine\Annotation\Exception\ClassNotFoundException
+     * @expectedException \Viliask\Doctrine\Annotation\Exception\ClassNotFoundException
      */
     public function testConstructClassNotFoundException()
     {

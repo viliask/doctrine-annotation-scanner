@@ -20,60 +20,60 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Tests\Scanner;
+namespace Viliask\Doctrine\Annotation\Tests\Scanner;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use Phramz\Doctrine\Annotation\Scanner\ClassFileInfo;
-use Phramz\Doctrine\Annotation\Scanner\Scanner;
+use Viliask\Doctrine\Annotation\Scanner\ClassFileInfo;
+use Viliask\Doctrine\Annotation\Scanner\Scanner;
 
 /**
  * Class ScannerTest
- * @package Phramz\Doctrine\Annotation\Tests\Scanner
- * @covers Phramz\Doctrine\Annotation\Scanner\Finder
+ * @package Viliask\Doctrine\Annotation\Tests\Scanner
+ * @covers Viliask\Doctrine\Annotation\Scanner\Finder
  */
 class ScannerTest extends \PHPUnit_Framework_TestCase
 {
     public function testConstruct()
     {
         $scanner = new Scanner(new AnnotationReader());
-        $this->assertInstanceOf('Phramz\Doctrine\Annotation\Scanner\Scanner', $scanner);
+        $this->assertInstanceOf('Viliask\Doctrine\Annotation\Scanner\Scanner', $scanner);
     }
 
     public function testGetIterator()
     {
         $scanner = new Scanner(new AnnotationReader());
-        $scanner->scan(array('Phramz\Doctrine\Annotation\Fixtures\Annotations\Foo'));
+        $scanner->scan(array('Viliask\Doctrine\Annotation\Fixtures\Annotations\Foo'));
 
         /** @var ClassFileInfo $classInfo */
         foreach ($scanner->in(__DIR__ . '/../../Fixtures') as $classInfo) {
             $this->assertEquals(
-                'Phramz\Doctrine\Annotation\Fixtures\Classes\AnnotatedClass',
+                'Viliask\Doctrine\Annotation\Fixtures\Classes\AnnotatedClass',
                 $classInfo->getClassName()
             );
 
             $test = $classInfo->getClassAnnotations();
             $this->assertInternalType('array', $test);
-            $this->assertInstanceOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Foo', $test[0]);
+            $this->assertInstanceOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Foo', $test[0]);
 
             $test = $classInfo->getMethodAnnotations();
             $this->assertInternalType('array', $test);
             $this->assertInternalType('array', $test['foo']);
-            $this->assertInstanceOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Foo', $test['foo'][0]);
+            $this->assertInstanceOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Foo', $test['foo'][0]);
             $this->assertInternalType('array', $test['bar']);
-            $this->assertInstanceOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Bar', $test['bar'][0]);
+            $this->assertInstanceOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Bar', $test['bar'][0]);
             $this->assertInternalType('array', $test['bar']);
-            $this->assertInstanceOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Foo', $test['foobar'][0]);
-            $this->assertInstanceOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Bar', $test['foobar'][1]);
+            $this->assertInstanceOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Foo', $test['foobar'][0]);
+            $this->assertInstanceOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Bar', $test['foobar'][1]);
 
             $test = $classInfo->getPropertyAnnotations();
             $this->assertInternalType('array', $test);
             $this->assertInternalType('array', $test['foo']);
-            $this->assertInstanceOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Foo', $test['foo'][0]);
+            $this->assertInstanceOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Foo', $test['foo'][0]);
             $this->assertInternalType('array', $test['bar']);
-            $this->assertInstanceOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Bar', $test['bar'][0]);
+            $this->assertInstanceOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Bar', $test['bar'][0]);
             $this->assertInternalType('array', $test['bar']);
-            $this->assertInstanceOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Foo', $test['foobar'][0]);
-            $this->assertInstanceOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Bar', $test['foobar'][1]);
+            $this->assertInstanceOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Foo', $test['foobar'][0]);
+            $this->assertInstanceOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Bar', $test['foobar'][1]);
         }
     }
 }

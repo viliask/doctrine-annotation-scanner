@@ -20,6 +20,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Fixtures;
+namespace Viliask\Doctrine\Annotation\Fixtures;
 
 // actually this ain't no class ;)

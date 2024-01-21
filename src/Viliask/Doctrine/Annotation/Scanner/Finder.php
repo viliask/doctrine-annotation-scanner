@@ -20,17 +20,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Scanner;
+namespace Viliask\Doctrine\Annotation\Scanner;
 
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\Reader;
-use Phramz\Doctrine\Annotation\Exception\AnnotationScannerException;
-use Phramz\Doctrine\Annotation\Exception\UnsupportedMethodCallException;
+use Viliask\Doctrine\Annotation\Exception\AnnotationScannerException;
+use Viliask\Doctrine\Annotation\Exception\UnsupportedMethodCallException;
 use Symfony\Component\Finder\Finder as BaseFinder;
 
 /**
  * Class Finder
- * @package Phramz\Doctrine\Annotation\Scanner
+ * @package Viliask\Doctrine\Annotation\Scanner
  */
 class Finder extends BaseFinder
 {

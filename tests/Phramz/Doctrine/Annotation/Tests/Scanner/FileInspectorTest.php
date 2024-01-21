@@ -20,15 +20,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Tests\Scanner;
+namespace Viliask\Doctrine\Annotation\Tests\Scanner;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use Phramz\Doctrine\Annotation\Scanner\FileInspector;
+use Viliask\Doctrine\Annotation\Scanner\FileInspector;
 
 /**
  * Class FileInspectorTest
- * @package Phramz\Doctrine\Annotation\Tests\Scanner
- * @covers Phramz\Doctrine\Annotation\Scanner\FileInspector
+ * @package Viliask\Doctrine\Annotation\Tests\Scanner
+ * @covers Viliask\Doctrine\Annotation\Scanner\FileInspector
  */
 class FileInspectorTest extends \PHPUnit_Framework_TestCase
 {
@@ -48,7 +48,7 @@ class FileInspectorTest extends \PHPUnit_Framework_TestCase
 
         $this->fixtureFilename = __DIR__ . '/../../Fixtures/Classes/AnnotatedClass.php';
         $this->fixtureClassname = 'AnnotatedClass';
-        $this->fixtureNamespace = 'Phramz\Doctrine\Annotation\Fixtures\Classes';
+        $this->fixtureNamespace = 'Viliask\Doctrine\Annotation\Fixtures\Classes';
         $this->fixtureFqcn = $this->fixtureNamespace . '\\' . $this->fixtureClassname;
 
         $this->fileInspector =  new FileInspector($this->fixtureFilename);
@@ -56,11 +56,11 @@ class FileInspectorTest extends \PHPUnit_Framework_TestCase
 
     public function testConstruct()
     {
-        $this->assertInstanceOf('Phramz\Doctrine\Annotation\Scanner\FileInspector', $this->fileInspector);
+        $this->assertInstanceOf('Viliask\Doctrine\Annotation\Scanner\FileInspector', $this->fileInspector);
     }
 
     /**
-     * @expectedException \Phramz\Doctrine\Annotation\Exception\FileNotFoundException
+     * @expectedException \Viliask\Doctrine\Annotation\Exception\FileNotFoundException
      */
     public function testConstructFileNotFoundException()
     {

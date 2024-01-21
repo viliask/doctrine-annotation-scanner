@@ -20,11 +20,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Exception;
+namespace Viliask\Doctrine\Annotation\Exception;
 
 /**
  * Class FileNotFoundException
- * @package Phramz\Doctrine\Annotation\Exception
+ * @package Viliask\Doctrine\Annotation\Exception
  */
 class FileNotFoundException extends AnnotationScannerException
 {

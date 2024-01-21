@@ -66,13 +66,13 @@ For more information about the `Finder` have a look at the [Symfony2 Finder](htt
 ``` php
 <?php
 
-use Phramz\Doctrine\Annotation\Scanner\Finder;
+use Viliask\Doctrine\Annotation\Scanner\Finder;
 use Doctrine\Common\Annotations\AnnotationReader;
 
 $reader = new AnnotationReader(); // get an instance of the doctrine annotation reader
 $finder = new Finder();
-$finder->containsAtLeastOneOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Foo')
-    ->containsAtLeastOneOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Bar')
+$finder->containsAtLeastOneOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Foo')
+    ->containsAtLeastOneOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Bar')
     ->setReader($reader)
     ->in('/tests');
 
@@ -86,29 +86,29 @@ foreach ($finder as $file) {
 The following example will find any classfile under `/tests` that contains either `@Foo` or `@Bar` annotations in
 property, method or class-docblocks.
 You can access the search result by iterating over the `Scanner` instance. For each classfile you'll get an instance of
-`Phramz\Doctrine\Annotation\Scanner\ClassFileInfo` which inherits from `Symfony\Component\Finder\SplFileInfo` but
+`Viliask\Doctrine\Annotation\Scanner\ClassFileInfo` which inherits from `Symfony\Component\Finder\SplFileInfo` but
 additionally offers access to the annotations of the class.
 
 ``` php
 <?php
 
-use Phramz\Doctrine\Annotation\Scanner\Scanner;
+use Viliask\Doctrine\Annotation\Scanner\Scanner;
 use Doctrine\Common\Annotations\AnnotationReader;
 
 $reader = new AnnotationReader(); // get an instance of the doctrine annotation reader
 $scanner = new Scanner($reader);
 
 $scanner->scan(array(
-        'Phramz\Doctrine\Annotation\Fixtures\Annotations\Foo',
-        'Phramz\Doctrine\Annotation\Fixtures\Annotations\Bar'
+        'Viliask\Doctrine\Annotation\Fixtures\Annotations\Foo',
+        'Viliask\Doctrine\Annotation\Fixtures\Annotations\Bar'
     ))
     ->in('/tests');
 
-/** @var Phramz\Doctrine\Annotation\Scanner\ClassFileInfo $file */
+/** @var Viliask\Doctrine\Annotation\Scanner\ClassFileInfo $file */
 foreach ($scanner as $file) {
     echo "Found: " . $file->getFilename();    // will output for example "Found: AnnotatedClass.php"
     echo "Class: " . $file->getClassName();   // will output for example
-                                              // "Class: Phramz\Annotation\AnnotatedClass"
+                                              // "Class: Viliask\Annotation\AnnotatedClass"
     print_r($file->getClassAnnotations());    // will give you an array of all annotations
                                               // in the class-docblock
     print_r($file->getMethodAnnotations());   // will give you an array of all methods and

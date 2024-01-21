@@ -20,15 +20,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace Phramz\Doctrine\Annotation\Tests\Scanner;
+namespace Viliask\Doctrine\Annotation\Tests\Scanner;
 
-use Phramz\Doctrine\Annotation\Scanner\Finder;
+use Viliask\Doctrine\Annotation\Scanner\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 
 /**
  * Class FinderTest
- * @package Phramz\Doctrine\Annotation\Tests\Scanner
- * @covers Phramz\Doctrine\Annotation\Scanner\Finder
+ * @package Viliask\Doctrine\Annotation\Tests\Scanner
+ * @covers Viliask\Doctrine\Annotation\Scanner\Finder
  */
 class FinderTest extends \PHPUnit_Framework_TestCase
 {
@@ -44,14 +44,14 @@ class FinderTest extends \PHPUnit_Framework_TestCase
 
     public function testConstruct()
     {
-        $this->assertInstanceOf('Phramz\Doctrine\Annotation\Scanner\Finder', $this->finder);
+        $this->assertInstanceOf('Viliask\Doctrine\Annotation\Scanner\Finder', $this->finder);
         $this->assertInstanceOf('Symfony\Component\Finder\Finder', $this->finder);
     }
 
     public function testFilter()
     {
-        $this->finder->containsAtLeastOneOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Bazz')
-            ->containsAtLeastOneOf('Phramz\Doctrine\Annotation\Fixtures\Annotations\Bar')
+        $this->finder->containsAtLeastOneOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Bazz')
+            ->containsAtLeastOneOf('Viliask\Doctrine\Annotation\Fixtures\Annotations\Bar')
             ->in(__DIR__ . '/../../Fixtures');
 
         $this->assertCount(1, $this->finder);
@@ -69,7 +69,7 @@ class FinderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Phramz\Doctrine\Annotation\Exception\UnsupportedMethodCallException
+     * @expectedException \Viliask\Doctrine\Annotation\Exception\UnsupportedMethodCallException
      */
     public function testDirectories()
     {
@@ -78,7 +78,7 @@ class FinderTest extends \PHPUnit_Framework_TestCase
 
     public function testCreate()
     {
-        $this->assertInstanceOf('Phramz\Doctrine\Annotation\Scanner\Finder', $this->finder->create());
+        $this->assertInstanceOf('Viliask\Doctrine\Annotation\Scanner\Finder', $this->finder->create());
     }
 
     public function testGetSetReader()
