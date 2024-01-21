@@ -1,9 +1,9 @@
 {
-    "name": "phramz/doctrine-annotation-scanner",
+    "name": "viliask/doctrine-annotation-scanner",
     "type": "library",
     "description": "library to scan files and folders for annotated classes using doctrine annotations",
     "keywords": ["annotation", "doctrine", "scanner"],
-    "homepage": "https://github.com/phramz/doctrine-annotation-scanner",
+    "homepage": "https://github.com/viliask/doctrine-annotation-scanner",
     "license": "MIT",
     "authors": [
         {
@@ -22,7 +22,7 @@
         "squizlabs/php_codesniffer": "1.*"
     },
     "autoload": {
-        "psr-0": { "Phramz\\Doctrine\\Annotation": "src/" }
+        "psr-0": { "Viliask\\Doctrine\\Annotation": "src/" }
     },
     "minimum-stability": "stable"
 }
