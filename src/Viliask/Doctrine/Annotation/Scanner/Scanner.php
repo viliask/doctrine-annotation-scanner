@@ -36,11 +36,11 @@ class Scanner implements \IteratorAggregate
     /**
      * @var Reader
      */
-    private $reader = null;
+    protected $reader = null;
 
-    private $path = array();
-    private $exclude = array();
-    private $annotations = array();
+    protected $path = array();
+    protected $exclude = array();
+    protected $annotations = array();
 
     /**
      * @param Reader $reader
