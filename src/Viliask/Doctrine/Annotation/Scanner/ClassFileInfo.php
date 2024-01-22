@@ -201,17 +201,17 @@ class ClassFileInfo extends SplFileInfo
         $this->fileInfo->setInfoClass($class_name);
     }
 
-    public function getRelativePath()
+    public function getRelativePath(): string
     {
         return $this->fileInfo->getRelativePath();
     }
 
-    public function getRelativePathname()
+    public function getRelativePathname(): string
     {
         return $this->fileInfo->getRelativePathname();
     }
 
-    public function getContents()
+    public function getContents(): string
     {
         return $this->fileInfo->getContents();
     }
